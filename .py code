@@ -9,7 +9,8 @@ class BankAccount:
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount
-            print(f"Deposited: {amount}. Current balance: {self.balance}")
+            print("Deposited: ",amount, "Current balance: ",self.balance)
+
         else:
             print("Deposit amount should be positive.")
 
@@ -20,15 +21,15 @@ class BankAccount:
             print("Insufficient balance!")
         else:
             self.balance -= amount
-            print(f"Withdrew: {amount}. Current balance: {self.balance}")
+            print("Withdrew: ",amount , "Current balance: " , self.balance)
 
     def check_balance(self):
-        print(f"Account balance: {self.balance}")
+        print("Account balance:", self.balance)
 
     def get_account_details(self):
-        print(f"Account Holder: {self.account_holder}")
-        print(f"Account Number: {self.account_number}")
-        print(f"Account Balance: {self.balance}")
+        print("Account Holder:",self.account_holder")
+        print("Account Number:",self.account_number")
+        print("Account Balance:",self.balance")
 
 
 class Bank:
@@ -39,7 +40,7 @@ class Bank:
         if name not in self.accounts:
             account = BankAccount(name)
             self.accounts[name] = account
-            print(f"Account created for {name}.")
+            print("Account created for",name)
         else:
             print("Account already exists for this holder.")
 
